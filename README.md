@@ -46,3 +46,44 @@ Four ensemble models were implemented and compared: `Random Forest`, `Gradient B
 - **Utilities**: joblib, ngrok
 
 ### Project Structure
+smart-healthcare-prediction/
+├── ML_CCP_Report_Mahmoona_Khan.pdf   # Full project report
+├── diabetes_prediction.ipynb         # Main Jupyter notebook
+├── app.py                            # Flask web application
+├── requirements.txt                  # Python dependencies
+├── model/                            # Saved model files
+│   └── voting_classifier.pkl
+├── static/                           # CSS and assets
+├── templates/                        # HTML templates
+│   └── index.html
+└── README.md
+
+### How to Run
+
+1. Notebook (Training & Evaluation)
+Open diabetes_prediction.ipynb in Google Colab or Jupyter Notebook and run all cells.
+
+### 2. Web Application
+  bash
+  pip install -r requirements.txt
+  python app.py
+
+### Results Summary
+- Best Model: Voting Classifier (Soft)
+- Primary Dataset F1: 0.545 (3-class)
+- Pima Indians F1: 0.73-0.76 (binary) — validates model soundness
+- SMOTE Effect: Successfully balanced all three classes to 10,666 samples each
+
+### Key Insights
+  Clinical complexity indicators (lab procedures, medications, time in hospital) are the strongest predictors
+  The 20+ point F1 gap between datasets confirms lower primary accuracy is due to dataset complexity, not model deficiency
+  Class 0 (Non-Diabetic) remains the hardest to classify correctly even after SMOTE
+
+
+### Author
+Mahmoona Khan
+BSCS
+Lahore Garrison University
+Course: CSE6505 — Machine Learning
+Instructor: Khuram Tehseen
+Submission Date: May 11, 2026
